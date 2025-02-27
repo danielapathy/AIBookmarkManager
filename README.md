@@ -23,7 +23,7 @@ The core functionality of AIBookmarkManager is its ability to intelligently cate
 
 Personalize your experience with customizable themes and visual styles.
 
-![Theme Customization](Preview.png)
+![Theme Customization](ThemePreview.png)
 
 - Choose between light and dark modes
 - Select from various color themes (default, green, purple, orange, etc.)
