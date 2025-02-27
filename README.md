@@ -45,7 +45,7 @@ Keep track of organizational changes and restore previous states when needed.
 
 Create and save different organizational strategies to suit various needs.
 
-![Custom Presets](Preview.png)
+![Custom Presets](PresetPreview.png)
 
 - Define custom instructions for how bookmarks should be organized
 - Save multiple organization presets for different purposes
@@ -56,7 +56,7 @@ Create and save different organizational strategies to suit various needs.
 
 Fine-tune the extension's behavior and AI connectivity options.
 
-![Settings Screen](Preview.png)
+![Settings Screen](SettingsPreview.png)
 
 - Connect to OpenAI or Anthropic Claude services
 - Adjust AI parameters like temperature and token limits
