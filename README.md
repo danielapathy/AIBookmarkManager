@@ -12,7 +12,7 @@ AIBookmarkManager is a Chrome extension that uses artificial intelligence to org
 
 The core functionality of AIBookmarkManager is its ability to intelligently categorize bookmarks based on their content and URL patterns.
 
-![AI Organization](BookmarkPreview.png)
+![AI Organization](assets/BookmarkPreview.png)
 
 - Analyzes bookmark titles, URLs, and current locations
 - Suggests optimal folder placements based on content relevance
@@ -23,7 +23,7 @@ The core functionality of AIBookmarkManager is its ability to intelligently cate
 
 Personalize your experience with customizable themes and visual styles.
 
-![Theme Customization](ThemePreview.png)
+![Theme Customization](assets/ThemePreview.png)
 
 - Choose between light and dark modes
 - Select from various color themes (default, green, purple, orange, etc.)
@@ -34,7 +34,7 @@ Personalize your experience with customizable themes and visual styles.
 
 Keep track of organizational changes and restore previous states when needed.
 
-![History Tracking](HistoryPreview.png)
+![History Tracking](assets/HistoryPreview.png)
 
 - Records before and after states for each organization session
 - One-click restoration of previous bookmark structures
@@ -45,7 +45,7 @@ Keep track of organizational changes and restore previous states when needed.
 
 Create and save different organizational strategies to suit various needs.
 
-![Custom Presets](PresetPreview.png)
+![Custom Presets](assets/PresetPreview.png)
 
 - Define custom instructions for how bookmarks should be organized
 - Save multiple organization presets for different purposes
@@ -56,7 +56,7 @@ Create and save different organizational strategies to suit various needs.
 
 Fine-tune the extension's behavior and AI connectivity options.
 
-![Settings Screen](SettingsPreview.png)
+![Settings Screen](assets/SettingsPreview.png)
 
 - Connect to OpenAI or Anthropic Claude services
 - Adjust AI parameters like temperature and token limits
