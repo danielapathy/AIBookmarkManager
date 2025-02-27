@@ -1,0 +1,124 @@
+<div class="page next" id="presetsPage">
+  <div data-css>
+    /* Presets page specific styling */
+    .preset-list {
+      margin-top: 16px;
+      margin-bottom: 16px;
+    }
+    
+    .preset-list-empty {
+      padding: 24px;
+      text-align: center;
+      background: var(--preset-background);
+      border: 1px dashed var(--border-color);
+      border-radius: 8px;
+      color: var(--label-text);
+      font-size: 14px;
+      margin-bottom: 16px;
+    }
+    
+    .preset-list-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px;
+      background: var(--preset-background);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      margin-bottom: 12px;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    
+    .preset-list-item:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    }
+    
+    .preset-info {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+    
+    .preset-title {
+      margin: 0;
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--text-color);
+    }
+    
+    .preset-count {
+      font-size: 12px;
+      color: var(--label-text);
+    }
+    
+    .preset-actions {
+      display: flex;
+      gap: 8px;
+    }
+    
+    .preset-action-btn {
+      background: var(--secondary-button-background);
+      color: var(--secondary-button-text);
+      border: none;
+      border-radius: 4px;
+      width: 32px;
+      height: 32px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    
+    .preset-action-btn:hover {
+      background: var(--secondary-button-hover);
+    }
+    
+    .preset-action-btn.delete {
+      color: #ef4444;
+    }
+    
+    .preset-action-btn.edit {
+      color: var(--primary-color);
+    }
+  </div>
+  
+  <button class="back-button">
+    <i class="fas fa-arrow-left"></i> Back
+  </button>
+  
+  <div class="card">
+    <h2>Manage Presets</h2>
+    
+    <div class="preset-list" id="presetList">
+      <!-- If no presets available, show this: -->
+      <div class="preset-list-empty" id="emptyPresetMessage" style="display: none;">
+        <i class="fas fa-info-circle"></i>
+        <p>No presets created yet. Add your first preset to get started.</p>
+      </div>
+      
+      <!-- Preset items will be rendered here -->
+      <!-- Example of a preset item:
+      <div class="preset-list-item">
+        <div class="preset-info">
+          <h3 class="preset-title">General Organization</h3>
+          <span class="preset-count">5 instructions</span>
+        </div>
+        <div class="preset-actions">
+          <button class="preset-action-btn edit" data-id="preset-1" title="Edit">
+            <i class="fas fa-pencil-alt"></i>
+          </button>
+          <button class="preset-action-btn delete" data-id="preset-1" title="Delete">
+            <i class="fas fa-trash-alt"></i>
+          </button>
+        </div>
+      </div>
+      -->
+    </div>
+    
+    <button id="addPresetBtn" class="button">
+      <i class="fas fa-plus"></i> Add New Preset
+    </button>
+  </div>
+</div>

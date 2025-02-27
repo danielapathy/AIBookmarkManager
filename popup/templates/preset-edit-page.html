@@ -1,0 +1,200 @@
+<div class="page next" id="presetEditPage">
+  <div data-css>
+    /* Preset edit page specific styling */
+    .form-group.name-input {
+      margin-bottom: 24px;
+    }
+    
+    .instruction-list {
+      margin: 24px 0;
+    }
+    
+    .instruction-item {
+      position: relative;
+      padding: 16px;
+      background: var(--preset-background);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      margin-bottom: 16px;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    
+    .instruction-item:hover {
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    }
+    
+    .instruction-number {
+      position: absolute;
+      left: -10px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: var(--primary-color);
+      color: white;
+      width: 24px;
+      height: 24px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      font-weight: 500;
+      z-index: 1;
+    }
+    
+    .instruction-content {
+      margin-left: 10px;
+      margin-right: 32px;
+    }
+    
+    .instruction-item textarea {
+      resize: none;
+      width: 100%;
+      border: none;
+      background: none;
+      resize: vertical;
+      min-height: 80px;
+      font-size: 14px;
+      line-height: 1.5;
+      color: var(--text-color);
+      transition: border 0.2s;
+      padding: 4px;
+    }
+    
+    .instruction-item textarea:focus {
+      outline: none;
+      border-radius: 4px;
+      box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.2);
+    }
+    
+    .instruction-actions {
+      position: absolute;
+      right: 8px;
+      top: 8px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      opacity: 0.5;
+      transition: opacity 0.2s;
+    }
+    
+    .instruction-item:hover .instruction-actions {
+      opacity: 1;
+    }
+    
+    .instruction-action-btn {
+      background: var(--secondary-button-background);
+      color: var(--secondary-button-text);
+      border: none;
+      border-radius: 4px;
+      width: 28px;
+      height: 28px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    
+    .instruction-action-btn:hover {
+      background: var(--secondary-button-hover);
+    }
+    
+    .instruction-action-btn.delete {
+      color: #ef4444;
+    }
+    
+    .drag-handle {
+      cursor: move;
+      color: var(--icon-color);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 28px;
+      height: 28px;
+      opacity: 0.6;
+    }
+    
+    .instruction-item:hover .drag-handle {
+      opacity: 1;
+    }
+    
+    .sortable-ghost {
+      background: var(--primary-color);
+      opacity: 0.3;
+    }
+    
+    .actions-container {
+      display: flex;
+      gap: 12px;
+      margin-top: 16px;
+    }
+    
+    .actions-container .button-secondary {
+      flex: 1;
+    }
+    
+    .actions-container .button {
+      flex: 2;
+    }
+    
+    .empty-instructions {
+      padding: 24px;
+      text-align: center;
+      background: var(--preset-background);
+      border: 1px dashed var(--border-color);
+      border-radius: 8px;
+      color: var(--label-text);
+      font-size: 14px;
+      margin-bottom: 16px;
+    }
+  </div>
+  
+  <button class="back-button">
+    <i class="fas fa-arrow-left"></i> Back
+  </button>
+  
+  <div class="card">
+    <div class="card-header">
+      <h2 id="presetEditTitle">Edit Preset</h2>
+    </div>
+    
+    <div class="form-group name-input">
+      <label for="presetName">Preset Name</label>
+      <input type="text" id="presetName" class="form-input" placeholder="Enter a descriptive name">
+    </div>
+    
+    <div class="instruction-list" id="instructionList">
+      <!-- Instructions will be rendered here -->
+      <div id="emptyInstructionsMessage" class="empty-instructions" style="display: none;">
+        <i class="fas fa-info-circle"></i>
+        <p>No instructions added yet. Add your first instruction to get started.</p>
+      </div>
+      
+      <!-- Example of an instruction item:
+      <div class="instruction-item" data-id="instruction-1">
+        <div class="instruction-number">1</div>
+        <div class="drag-handle">
+          <i class="fas fa-grip-lines"></i>
+        </div>
+        <div class="instruction-content">
+          <textarea placeholder="Enter instruction for the AI...">Organize these bookmarks into logical groups based on their content.</textarea>
+        </div>
+        <div class="instruction-actions">
+          <button class="instruction-action-btn delete" title="Delete instruction">
+            <i class="fas fa-trash-alt"></i>
+          </button>
+        </div>
+      </div>
+      -->
+    </div>
+    
+    <div class="actions-container">
+      <button id="addInstructionBtn" class="button button-secondary">
+        <i class="fas fa-plus"></i> Add Instruction
+      </button>
+      <button id="savePresetBtn" class="button">
+        <i class="fas fa-save"></i> Save Preset
+      </button>
+    </div>
+  </div>
+</div>

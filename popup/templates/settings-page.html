@@ -1,0 +1,178 @@
+<div class="page next" id="settingsPage">
+	<div data-css="">
+      /* Enhanced slider styling */
+
+      .slider-container {
+          display: flex;
+          flex-direction: column;
+          margin-bottom: 16px;
+      }
+      .slider-header {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin-bottom: 8px;
+      }
+      .slider-label {
+          font-weight: 500;
+          color: var(--label-text);
+          font-size: 14px;
+      }
+      .slider-value {
+          background: var(--primary-color);
+          color: white;
+          padding: 2px 8px;
+          border-radius: 12px;
+          font-size: 12px;
+          font-weight: 500;
+      }
+      /* Improve number input styling */
+
+      .token-input {
+          width: 100%;
+          padding: 10px 12px;
+          border-radius: 8px;
+          border: 1px solid var(--border-color);
+          background: var(--input-background);
+          color: var(--input-text);
+          font-size: 14px;
+          transition: border-color 0.2s;
+          box-sizing: border-box;
+          /* This is the key fix */
+      }
+      input.token-input {
+          box-sizing: border-box !important;
+          width: 100%;
+      }
+      .token-input:focus {
+          outline: none;
+          border-color: var(--primary-color);
+          box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.2);
+      }
+      /* Custom behavior controls container */
+
+      #customBehaviorControls {
+          background: var(--preset-background);
+          border-radius: 8px;
+          padding: 16px;
+          margin-top: 12px;
+          margin-bottom: 15px;
+          border: 1px solid var(--border-color);
+      }
+      /* General styling for descriptions */
+
+      .slider-description, .token-input+.slider-description {
+          background: rgba(0, 0, 0, 0.05);
+          /* Light background */
+          padding: 8px 10px;
+          border-radius: 6px;
+          font-size: 12px;
+          color: var(--subtle-text-color);
+          margin-top: 8px;
+          border: 1px solid var(--border-color);
+          /* Soft border */
+      }
+      /* Slight shadow for depth */
+
+      .slider-description {
+          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+      }
+      /* Ensure settings rows have proper spacing */
+
+      .settings-row {
+          margin-top: 14px;
+      }
+	</div>
+    <button class="back-button"><i class="fas fa-arrow-left"></i> Back</button> 
+    <!-- Settings Page -->
+	<div class="card">
+		<h2>API Settings</h2>
+		<div class="form-group">
+			<label for="apiSelect" style="margin-top: 16px;">Preferred API</label> <select id="apiSelect">
+				<option value="openai">
+					OpenAI
+				</option>
+				<option value="claude">
+					Anthropic
+				</option>
+			</select>
+		</div>
+        
+        <!-- OpenAI Settings -->
+		<div class="form-group" id="openaiSettings">
+			<label for="openaiToken">OpenAI API Token</label> <input id="openaiToken" placeholder="sk-..." type="password"> <label for="openaiModel">Model</label> <select id="openaiModel">
+				<option value="gpt-4o-mini">
+					GPT-4o Mini
+				</option>
+				<option value="gpt-3.5-turbo">
+					GPT-3.5 Turbo
+				</option>
+				<option value="gpt-4-turbo">
+					GPT-4 Turbo
+				</option>
+				<option value="gpt-4">
+					GPT-4
+				</option>
+				<option value="o1-mini">
+					o1 Mini
+				</option>
+				<option value="o1">
+					o1
+				</option>
+			</select>
+		</div>
+        
+        <!-- Claude Settings -->
+		<div class="form-group" id="claudeSettings">
+			<label for="claudeToken">Claude API Token</label> <input id="claudeToken" placeholder="sk-..." type="password"> <label for="claudeModel">Model</label> <select id="claudeModel">
+				<option value="claude-3-5-haiku-latest">
+					Claude 3.5 Haiku
+				</option>
+				<option value="claude-3-5-sonnet-latest">
+					Claude 3.5 Sonnet
+				</option>
+				<option value="claude-3-7-sonnet-latest">
+					Claude 3.7 Sonnet
+				</option>
+				<option value="claude-3-opus-latest">
+					Claude 3 Opus
+				</option>
+				<option value="claude-3-haiku-20240307">
+					Claude 3 Haiku
+				</option>
+			</select>
+		</div>
+		<div class="settings-row">
+			<label class="setting-label" for="behaviorPreset">AI Behavior</label> <select class="preset-select" id="behaviorPreset">
+				<option value="precise">
+					Precise (Consistent, factual responses)
+				</option>
+				<option value="balanced">
+					Balanced (Moderate creativity)
+				</option>
+				<option value="creative">
+					Creative (More varied responses)
+				</option>
+				<option value="custom">
+					Custom settings
+				</option>
+			</select>
+		</div>
+		<div id="customBehaviorControls" style="display: none;">
+			<div class="slider-container">
+				<div class="slider-header">
+					<span class="slider-label">Temperature</span> <span class="slider-value" id="temperatureValue">0.3</span>
+				</div><input class="slider" id="temperatureSlider" max="1" min="0" step="0.1" type="range" value="0.3">
+				<div class="slider-description">
+					Lower values create more consistent, deterministic results. Higher values create more creative, varied outputs.
+				</div>
+			</div>
+			<div class="settings-row">
+				<label class="setting-label" for="maxTokensInput">Max Output Length</label> <input class="token-input" id="maxTokensInput" max="4000" min="100" type="number" value="1024">
+				<div class="slider-description">
+					Maximum number of tokens in the AI response. Higher values allow longer responses.
+				</div>
+			</div>
+		</div><button class="button" id="testAIBtn"><i class="fas fa-plug"></i> Test Connection</button> <button class="button" id="saveSettingsBtn"><i class="fas fa-save"></i> Save Settings</button>
+	</div>
+</div>

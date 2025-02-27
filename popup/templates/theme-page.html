@@ -1,0 +1,178 @@
+<div class="page next" id="themePage">
+  <div data-css>
+    /* Themes page specific CSS */
+    .theme-toggle {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 16px;
+    }
+
+    .theme-mode-btn {
+      flex: 1;
+      padding: 12px;
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      background: var(--card-background);
+      color: var(--text-color);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    .theme-mode-btn.active {
+      background: var(--primary-color);
+      color: white;
+      border-color: var(--primary-color);
+    }
+
+    .theme-options {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 8px;
+      margin-bottom: 16px;
+    }
+
+    .theme-option {
+      padding: 12px;
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      background: var(--card-background);
+      color: var(--text-color);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .theme-option.active {
+      border-color: var(--primary-color);
+      background: var(--preset-background);
+    }
+
+    .color-preview {
+      width: 24px;
+      height: 24px;
+      border-radius: 12px;
+    }
+
+    .color-picker-container {
+      margin-top: 16px;
+    }
+
+    .color-picker-label {
+      display: block;
+      margin-bottom: 8px;
+      font-size: 14px;
+      color: var(--label-text);
+    }
+
+    .color-picker-input {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .color-input {
+      width: 40px;
+      height: 40px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      background: none;
+    }
+
+    .color-input::-webkit-color-swatch-wrapper {
+      padding: 0;
+    }
+
+    .color-input::-webkit-color-swatch {
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+    }
+
+    .color-hex {
+      flex: 1;
+      padding: 8px 12px;
+      border-radius: 8px;
+      border: 1px solid var(--border-color);
+      background: var(--input-background);
+      color: var(--input-text);
+      font-size: 14px;
+    }
+
+    .theme-save-section {
+      margin-top: 24px;
+    }
+  </div>
+  
+  <button class="back-button">
+    <i class="fas fa-arrow-left"></i> Back
+  </button>
+  
+  <div class="card">
+          <h2>Theme Settings</h2>
+          <div class="form-group">
+            <label>Color Mode</label>
+            <div class="theme-toggle">
+              <button id="lightMode" class="theme-mode-btn active">
+                <i class="fas fa-sun"></i> Light </button>
+              <button id="darkMode" class="theme-mode-btn">
+                <i class="fas fa-moon"></i> Dark </button>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Color Themes</label>
+            <div class="theme-options">
+              <button class="theme-option" data-theme="default">
+                <div class="color-preview" style="background: #2563eb"></div> Default Blue
+              </button>
+              <button class="theme-option" data-theme="green">
+                <div class="color-preview" style="background: #059669"></div> Forest Green
+              </button>
+              <button class="theme-option" data-theme="purple">
+                <div class="color-preview" style="background: #7c3aed"></div> Royal Purple
+              </button>
+              <button class="theme-option" data-theme="orange">
+                <div class="color-preview" style="background: #ea580c"></div> Sunset Orange
+              </button>
+              
+              <!-- New Solid Colors -->
+              <button class="theme-option" data-theme="teal">
+                <div class="color-preview" style="background: #0d9488"></div> Ocean Teal
+              </button>
+              <button class="theme-option" data-theme="rose">
+                <div class="color-preview" style="background: #e11d48"></div> Rose Red
+              </button>
+              <button class="theme-option" data-theme="amber">
+                <div class="color-preview" style="background: #d97706"></div> Golden Amber
+              </button>
+              <button class="theme-option" data-theme="indigo">
+                <div class="color-preview" style="background: #4338ca"></div> Deep Indigo
+              </button>
+              <button class="theme-option" data-theme="pink">
+                <div class="color-preview" style="background: #db2777"></div> Fuchsia Pink
+              </button>
+
+              <!-- Gradient Themes -->
+              <button class="theme-option" data-theme="sunset">
+                <div class="color-preview" style="background: linear-gradient(45deg, #f97316, #db2777)"></div> Sunset Fusion
+              </button>
+              <button class="theme-option" data-theme="ocean">
+                <div class="color-preview" style="background: linear-gradient(45deg, #0ea5e9, #2dd4bf)"></div> Ocean Breeze
+              </button>
+              <button class="theme-option" data-theme="aurora">
+                <div class="color-preview" style="background: linear-gradient(45deg, #6366f1, #a855f7)"></div> Aurora Nights
+              </button>
+              <button class="theme-option" data-theme="forest">
+                <div class="color-preview" style="background: linear-gradient(45deg, #059669, #84cc16)"></div> Forest Dawn
+              </button>
+              <button class="theme-option" data-theme="cherry">
+                <div class="color-preview" style="background: linear-gradient(45deg, #dc2626, #db2777)"></div> Cherry Blossom
+              </button>
+              
+            </div>
+          </div>
+        </div>
+</div>

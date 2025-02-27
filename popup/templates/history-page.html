@@ -1,0 +1,77 @@
+<div class="page next" id="historyPage">
+  <div data-css>
+    /* History page specific styling */
+    .history-item {
+      background: var(--preset-background);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      margin-bottom: 12px;
+      overflow: hidden;
+    }
+
+    .history-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 16px;
+      background: var(--card-background);
+    }
+
+    .history-timestamp {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--text-color);
+      font-size: 14px;
+    }
+
+    .history-actions {
+      display: flex;
+      gap: 8px;
+    }
+
+    .history-details {
+      padding: 16px;
+      border-top: 1px solid var(--border-color);
+    }
+
+    .history-comparison {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    .history-before,
+    .history-after {
+      font-size: 12px;
+    }
+
+    .history-before h4,
+    .history-after h4 {
+      margin: 0 0 8px;
+      color: var(--text-color);
+    }
+
+    .history-comparison pre {
+      background: var(--card-background);
+      padding: 8px;
+      border-radius: 4px;
+      overflow-x: auto;
+      margin: 0;
+      font-family: monospace;
+      white-space: pre-wrap;
+      word-break: break-word;
+    }
+  </div>
+  
+  <button class="back-button">
+    <i class="fas fa-arrow-left"></i> Back
+  </button>
+  
+  <div class="card">
+    <h2>Organization History</h2>
+    <div id="historyList">
+      <!-- History items will be rendered here -->
+    </div>
+  </div>
+</div>

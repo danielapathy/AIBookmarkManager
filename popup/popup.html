@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Bookmarks Manager</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="../lib/Sortable.min.js"></script>
+    <script src="../js/processor.js"></script>
+  </head>
+  <body>
+    <div id="loadingOverlay">
+      <div class="loading-card">
+        <div class="loading-spinner"></div>
+        <p>Organizing bookmarks...</p>
+      </div>
+    </div>
+    <div id="status" class="status"></div>
+    <div class="container">
+      <!-- Main Page -->
+      {{template: templates/main-page.html}}
+      
+      <!-- History Page -->
+      {{template: templates/history-page.html}}
+      
+      <!-- Themes Page -->
+      {{template: templates/theme-page.html}}
+      
+      <!-- Settings Page -->
+      {{template: templates/settings-page.html}}
+      
+      <!-- Presets List Page -->
+      {{template: templates/presets-page.html}}
+      
+      <!-- Preset Edit Page -->
+      {{template: templates/preset-edit-page.html}}
+    </div>
+    <script src="../js/egg.js"></script>
+    <script type="module" src="popup.js"></script>
+  </body>
+</html>
