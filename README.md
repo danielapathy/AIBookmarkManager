@@ -12,7 +12,7 @@ AIBookmarkManager is a Chrome extension that uses artificial intelligence to org
 
 The core functionality of AIBookmarkManager is its ability to intelligently categorize bookmarks based on their content and URL patterns.
 
-![AI Organization](Preview.png)
+![AI Organization](BookmarkPreview.png)
 
 - Analyzes bookmark titles, URLs, and current locations
 - Suggests optimal folder placements based on content relevance
