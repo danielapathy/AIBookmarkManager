@@ -1,6 +1,6 @@
 # AIBookmarkManager
 
-![AIBookmarkManager Preview](Preview.png)
+![AIBookmarkManager Preview](assets/Preview.png)
 
 ## Overview
 
