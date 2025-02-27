@@ -34,7 +34,7 @@ Personalize your experience with customizable themes and visual styles.
 
 Keep track of organizational changes and restore previous states when needed.
 
-![History Tracking](Preview.png)
+![History Tracking](HistoryPreview.png)
 
 - Records before and after states for each organization session
 - One-click restoration of previous bookmark structures
